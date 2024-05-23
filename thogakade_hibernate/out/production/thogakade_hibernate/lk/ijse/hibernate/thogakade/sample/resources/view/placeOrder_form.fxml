@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hibernate.thogakade.sample.Controller.PlaceOrderFormController">
+   <children>
+      <Label layoutX="279.0" layoutY="14.0" prefHeight="42.0" prefWidth="213.0" text="Place Order Form" textFill="#5e5c5c">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="72.0" text="Order Id:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOrderId" layoutX="109.0" layoutY="71.0" textFill="#278d7f">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="526.0" layoutY="72.0" text="Order date:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOrderDate" layoutX="646.0" layoutY="71.0" textFill="#278d7f">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="132.0" text="Customer Id:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="484.0" layoutY="129.0" text="Customer Name:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCustomerName" layoutX="647.0" layoutY="128.0" textFill="#278d7f">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="186.0" text="Code:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="273.0" layoutY="190.0" text="Description:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDescription" layoutX="242.0" layoutY="226.0" textFill="#278d7f">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="436.0" layoutY="189.0" text="Unit Price:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblUnitPrice" layoutX="447.0" layoutY="225.0" textFill="#278d7f">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="553.0" layoutY="189.0" text="Qty. On Hand:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblQtyOnHand" layoutX="595.0" layoutY="225.0" textFill="#278d7f">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="704.0" layoutY="189.0" text="Qty:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtQty" layoutX="686.0" layoutY="209.0" onAction="#txtQtyOnAction" prefHeight="33.0" prefWidth="66.0" />
+      <TableView fx:id="tblOrderCart" layoutX="18.0" layoutY="307.0" prefHeight="200.0" prefWidth="743.0">
+         <columns>
+            <TableColumn fx:id="colItemCode" prefWidth="75.0" text="Code" />
+            <TableColumn fx:id="colDescription" prefWidth="191.0" text="Description" />
+            <TableColumn fx:id="colQty" prefWidth="81.0" text="Qty" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="172.0" text="Unit Price" />
+            <TableColumn fx:id="colTotal" prefWidth="112.0" text="Total" />
+            <TableColumn fx:id="colAction" prefWidth="115.0" text="Action" />
+         </columns>
+      </TableView>
+      <Label fx:id="lblNetTotal" layoutX="122.0" layoutY="516.0" prefHeight="42.0" prefWidth="0.0" textFill="#b51313">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="520.0" text="Net Total:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCustomerId" layoutX="129.0" layoutY="130.0" onAction="#cmbCustomerOnAction" prefWidth="150.0" />
+      <ComboBox fx:id="cmbItemCode" layoutX="79.0" layoutY="184.0" onAction="#cmbItemOnAction" prefWidth="150.0" />
+      <Button layoutX="680.0" layoutY="266.0" mnemonicParsing="false" onAction="#btnAddToCartOnAction" text="Add to Cart" />
+      <Button layoutX="680.0" layoutY="513.0" mnemonicParsing="false" onAction="#btnPlaceOrderOnAction" text="Place Order" />
+      <Button layoutX="595.0" layoutY="513.0" mnemonicParsing="false" onAction="#btnBackOnAction" text="Back" />
+   </children>
+</AnchorPane>
